@@ -1,0 +1,34 @@
+{
+    "name": "meshi_muda",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --content-base src --mode development --inline",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/takDesign/meshiMuda.git"
+    },
+    "author": "vanarts web16",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/takDesign/meshiMuda/issues"
+    },
+    "homepage": "https://github.com/takDesign/meshiMuda#readme",
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
+        "@babel/preset-react": "^7.7.4",
+        "babel-loader": "^8.0.6",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.9.0"
+    },
+    "dependencies": {
+        "create-react-app": "^3.3.0"
+    }
+}
