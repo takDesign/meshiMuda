@@ -1,9 +1,9 @@
 # meshiMuda
 This is an app to reduce food waste 
 
-Command\n
+<strong>Command</strong><br>
 npm start  // To start webpack server
 
 
-Files\n
+<strong>Files</strong><br>
 When you compile src/js/index.js, src/index.min.js will be created.
