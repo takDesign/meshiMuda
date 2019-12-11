@@ -31,6 +31,7 @@ class Layout extends React.Component {
         return "Hey hey! we are MeshiMuda!";
     }
 
+    // render whole thing
     render() {
         return (
             <div>

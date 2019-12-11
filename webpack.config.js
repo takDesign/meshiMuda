@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var path = require('path');
 module.exports = {
   context: path.join(__dirname, "src"),
-  entry: "./js/client.js",
+  entry: "./js/index.js",
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -18,10 +18,10 @@ module.exports = {
   },
   output: {
     path: __dirname + "/src/",
-    filename: "client.min.js"
+    filename: "index.min.js"
   },
   plugins: debug ? [] : [new webpack.optimize.OccurrenceOrderPlugin(), new webpack.optimize.UglifyJsPlugin({
     mangle: false,
     sourcemap: false
-  }), ]
+  }),]
 };
