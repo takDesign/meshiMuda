@@ -2,8 +2,8 @@
 This is an app to reduce food waste 
 
 Command
-// To start webpack server
-npm start 
+npm start  // To start webpack server
+
 
 Files
-When you compile src/js/client.js, src/client.min.js will be created.
+When you compile src/js/index.js, src/index.min.js will be created.
