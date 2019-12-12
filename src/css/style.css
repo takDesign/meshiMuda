@@ -31,21 +31,3 @@ select.form-control {
 .border-md {
   border-width: 2px;
 }
-
-.btn-facebook {
-  background: #405D9D;
-  border: none;
-}
-
-.btn-facebook:hover, .btn-facebook:focus {
-  background: #314879;
-}
-
-.btn-twitter {
-  background: #42AEEC;
-  border: none;
-}
-
-.btn-twitter:hover, .btn-twitter:focus {
-  background: #1799e4;
-}

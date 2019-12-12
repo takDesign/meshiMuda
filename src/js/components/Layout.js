@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./Header"; // Header.js contains menu and target links
 import Footer from "./Footer";
 
 export default class Layout extends React.Component {

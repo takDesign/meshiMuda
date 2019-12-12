@@ -1,4 +1,4 @@
-# meshiMuda
+# Meshi Muda
 This is a vanarts web16 group project. A mobile website to reduce food waste.
 
 <strong>Command</strong><br>
