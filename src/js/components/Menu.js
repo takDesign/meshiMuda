@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 // component for each page
 const login = () => <div><h1>Login</h1>login page</div>
 const list = () => <div><h1>List</h1>List Page</div>
 const detail = () => <div><h1>Detail</h1>Detail Page</div>
+const page404 = () => <div><h1>404</h1>Page doesn't exist</div>  //<= If a requested page doesn't exist
 
 const Menu = () => {
 
@@ -27,9 +28,12 @@ const Menu = () => {
 
       <div>
         <div>
-          <Route path='/' exact component={login} />
-          <Route path='/list' exact component={list} />
-          <Route path='/detail' exact component={detail} />
+          <Switch>
+            <Route path='/' exact component={login} />
+            <Route path='/list' exact component={list} />
+            <Route path='/detail' exact component={detail} />
+            <Route exact component={page404} />
+          </Switch>
         </div>
       </div>
     </Router >)
