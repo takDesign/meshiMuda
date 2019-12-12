@@ -18,38 +18,98 @@
     
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+        <style>
+            iframe {
+                -ms-transform: scale(0.60);
+            }
+    
+            @media (max-width: 750px) {
+                iframe {
+                    max-width: 100%;
+                    height: 165px;
+                }
+            }
+    
+            @media (min-width: 768px) {
+                iframe {
+                    max-width: 100%;
+                    height: 250px;
+                }
+            }
+    
+            @media (min-width: 992px) {
+                iframe {
+                    max-width: 100%;
+                    height: 335px;
+                }
+            }
+    
+            @media (min-width: 1200px) {
+                iframe {
+                    max-width: 100%;
+                    height: 360px;
+                }
+            }
+            </style>
     </head>
 
     <body class="">
         <header>
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Meshi-Muda</a>
                 <h1 class="d-none">Meshi-Muda</h1>
             </nav>
         </header>
 
-        <main role="main">
-            <section class="border border-primary mx-4 my-4 px-3 py-3">
-                <h2>Livia</h2>
-                <lead>2 E Commercial</lead>
+        <main role="main" class="container mt-4 mb-5 pb-3">
+            <section class="border border-secondary mx-4 my-4 px-3 py-3">
+                <div class="mb-4">
+                    <h2>Livia</h2>
+                    <lead>2 E Commercial</lead>
+                </div>
                 
-                <hr class="my-4">
+                <div class="row py-3 mx-1 border-top d-flex align-items-center">
+                    <div class="col-6 px-0">
+                        <p class="mb-0">1 Steak</p>
+                    </div>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <p>1 Steak</p>
-                    <span class="badge badge-light h2 px-3 py-3">tip: $5.00</span>
+                    <div class="col-6 px-0">
+                        <span class="badge badge-dark h2 mb-0 px-3 py-3 float-right">tip: $5.00</span>
+                    </div>
+                </div>
+                
+                <div class="row py-3 mx-1 border-top d-flex align-items-center">
+                    <div class="col-6 px-0">
+                        <p>1 Steak</p>
+                    </div>
+
+                    <div class="col-6 px-0">
+                        <span class="badge badge-dark h2 px-3 py-3 float-right">tip: $5.00</span>
+                    </div>
                 </div>
                 
                 <div>
-
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10412.875312802027!2d-123.0697466!3d49.2722506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5a7826e246e7d8f7!2sLIVIA!5e0!3m2!1sen!2sca!4v1576098308976!5m2!1sen!2sca" 
+                        width="600" 
+                        height="450" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        allowfullscreen="">
+                    </iframe>
                 </div>
 
-                <p class="py-3">Instructions: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi deleniti, minus molestias vero accusantium eveniet fugit deserunt. Soluta maiores possimus porro eum, iste distinctio harum, magni vitae molestiae sed vero.</p>
+                <div>
+                    <p class="py-3"><strong>Instructions: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi deleniti, minus molestias vero accusantium eveniet fugit deserunt. Soluta maiores possimus porro eum, iste distinctio harum, magni vitae molestiae sed vero.</p>
+
+                    <a class="btn btn-primary text-center" href="#" role="button">Pick up Basket</a>
+                </div>
             </section>
         </main>
 
-        <footer class="footer fixed-bottom">
-            <ul class="nav navbar navbar-light bg-light justify-content-center">
+        <footer class="mt-4 fixed-bottom">
+            <ul class="nav navbar navbar-dark bg-dark justify-content-center">
                 <li class="nav-item mx-2">
                     <a class="nav-link active" href="#">
                         <i class="fas fa-user-alt fa-2x"></i>
