@@ -2,7 +2,8 @@
 This is a vanarts web16 group project. A mobile website to reduce food waste.
 
 <strong>Command</strong><br>
-npm start  // To start webpack server
+npm start  // Start webpack server
+npm run build // Build a publishable version
 
 <strong>Files</strong><br>
 When you compile src/js/index.js, src/index.min.js will be created.
