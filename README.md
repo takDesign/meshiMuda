@@ -2,7 +2,7 @@
 This is a vanarts web16 group project. A mobile website to reduce food waste.
 
 <strong>Command</strong><br>
-npm start  // Start webpack server
+npm start  // Start webpack server<br>
 npm run build // Build a publishable version
 
 <strong>Files</strong><br>
