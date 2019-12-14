@@ -1,6 +1,43 @@
 /*
 *
 * ==========================================
+* Common settings
+* ==========================================
+*
+*/
+body {
+  background: none;
+}
+
+body header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+body .container {
+  padding-top: 56px;
+  padding-bottom: 106px;
+}
+
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  background: grey;
+}
+
+body footer .material-icons {
+  color: #fff;
+  font-size: 3rem;
+  margin: .8rem;
+}
+
+/*
+*
+* ==========================================
 * Login page
 * ==========================================
 *

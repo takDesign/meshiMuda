@@ -1,6 +1,11 @@
 {
     "name": "meshi_muda",
     "version": "1.0.0",
+    "babel": {
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    },
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -20,6 +25,8 @@
     "homepage": "https://github.com/takDesign/meshiMuda#readme",
     "devDependencies": {
         "@babel/core": "^7.7.5",
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
+        "@babel/polyfill": "^7.7.0",
         "@babel/preset-env": "^7.7.6",
         "@babel/preset-react": "^7.7.4",
         "babel-loader": "^8.0.6",
@@ -31,6 +38,7 @@
     },
     "dependencies": {
         "create-react-app": "^3.3.0",
+        "react-bootstrap": "^1.0.0-beta.16",
         "react-router-dom": "^5.1.2"
     }
 }
