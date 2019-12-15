@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-        <title>MM: Cart</title>
+        <title>MM: Order</title>
         <meta name="description" content="Meshi-Muda: Reduce, Reuse, Recycle"/>
 
         <!-- GOOGLE FONTS -->
@@ -80,16 +80,6 @@
                     </div>
                 </div>
                 
-                <div class="row py-3 mx-1 border-top d-flex align-items-center">
-                    <div class="col-6 px-0">
-                        <p>1 Steak</p>
-                    </div>
-
-                    <div class="col-6 px-0">
-                        <span class="badge badge-dark h2 px-3 py-3 float-right">tip: $5.00</span>
-                    </div>
-                </div>
-                
                 <!-- GOOGLE MAP -->
                 <div>
                     <iframe 
@@ -102,13 +92,9 @@
                     </iframe>
                 </div>
 
-                <div class="mt-3">
-                    <p class=""><strong>Instructions: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi deleniti, minus molestias vero accusantium eveniet fugit deserunt. Soluta maiores possimus porro eum, iste distinctio harum, magni vitae molestiae sed vero.</p>
-
-                    <div class="d-flex justify-content-between">
-                        <a class="btn btn-secondary text-center" href="#" role="button">Payment Options</a>
-                        <a class="btn btn-primary text-center" href="#" role="button">Pick up Basket</a>
-                    </div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <a class="btn btn-outline-secondary text-center" href="#" role="button">Cancel Order</a>
+                    <a class="btn btn-outline-primary text-center" href="#" role="button">What's your ETA?</a>
                 </div>
             </section>
         </main>
@@ -134,8 +120,9 @@
                     </a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link d-flex flex-row" href="#">
                         <i class="fas fa-concierge-bell fa-2x"></i>
+                        <span class="badge badge-pill badge-light align-self-start">2</span>
                         <!-- Order -->
                     </a>
                 </li>
