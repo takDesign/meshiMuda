@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+        <title>MM: Post Meal</title>
+        <meta name="description" content="Meshi-Muda: Reduce, Reuse, Recycle"/>
+
+        <!-- GOOGLE FONTS -->
+        <link href="#" rel="stylesheet"/> 
+    
+        <!-- FONT  AWESOME -->
+        <script src="https://kit.fontawesome.com/2a49eb69db.js"></script>
+    
+        <!--FAVICON-->
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    </head>
+
+    <body class="">
+        <header>
+            <nav class="navbar">
+                <a class="nav-link text-uppercase pl-0" href="#">
+                    <i class="fas fa-chevron-left mr-2"></i>
+                    Back
+                </a>
+            </nav>
+            <h2 class="font-bold ml-4">Post a meal</h2>
+        </header>
+
+        <main role="main" class="mt-4 mb-5 pb-3 border-top">
+            <div class="container mx-0">
+                <form class="form-signin">
+                
+                    <div class="form-label-group my-4">
+                        <label for="menuItem">What is the item?</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="menuItem" placeholder="Enter menu item">
+                        </div>
+                    </div>
+    
+                    <div class="form-label-group my-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">End of the night</label>
+                        </div>
+    
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Mistaken order</label>
+                        </div>
+    
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <label class="custom-control-label" for="customCheck3">Overstock</label>
+                        </div>
+    
+                        <div class="form-label-group my-3">
+                            <input type="text" id="addOwn" class="form-control" placeholder="Add your own" required>
+                        </div>
+                    </div>
+
+                    <div class="form-label-group my-3 px-0">
+                        <label for="strTime">PICK UP TIME</label>
+                        <div class="form-row px-1 d-flex justify-content-between">
+                            <input type="time" class="form-control col-5" id="strTime" value="11:00">
+                            <p class="px-2">to</p>
+                            <input type="time" class="form-control col-5" id="strTime" value="13:00">
+                        </div>
+                    </div>
+    
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
+                        Post item
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="mt-4 fixed-bottom">
+            <ul class="nav navbar navbar-dark bg-dark justify-content-center">
+                <li class="nav-item mx-2">
+                    <a class="nav-link d-flex flex-row" href="#">
+                        <i class="fas fa-receipt fa-2x"></i>
+                        <!-- Receipt -->
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" href="#">
+                        <i class="fas fa-user-alt fa-2x"></i>
+                        <!-- Account -->
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home fa-2x"></i>
+                        <!-- Home -->
+                    </a>
+                </li>
+            </ul>   
+        </footer>
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS and Popper -->
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
