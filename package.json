@@ -9,7 +9,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --content-base src --mode development --inline --open",
+        "start": "webpack-dev-server --content-base Views --mode development --inline --open",
         "build": "webpack -p",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -24,21 +24,21 @@
     },
     "homepage": "https://github.com/takDesign/meshiMuda#readme",
     "devDependencies": {
-        "@babel/core": "^7.7.5",
-        "@babel/plugin-proposal-class-properties": "^7.7.4",
-        "@babel/polyfill": "^7.7.0",
-        "@babel/preset-env": "^7.7.6",
-        "@babel/preset-react": "^7.7.4",
-        "babel-loader": "^8.0.6",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "webpack": "^4.41.2",
-        "webpack-cli": "^3.3.10",
-        "webpack-dev-server": "^3.9.0"
+        "@babel/core": "7.7.5",
+        "@babel/plugin-proposal-class-properties": "7.7.4",
+        "@babel/polyfill": "7.7.0",
+        "@babel/preset-env": "7.7.6",
+        "@babel/preset-react": "7.7.4",
+        "babel-loader": "8.0.6",
+        "react": "16.12.0",
+        "react-dom": "16.12.0",
+        "webpack": "4.41.2",
+        "webpack-cli": "3.3.10",
+        "webpack-dev-server": "3.9.0"
     },
     "dependencies": {
-        "create-react-app": "^3.3.0",
-        "react-bootstrap": "^1.0.0-beta.16",
-        "react-router-dom": "^5.1.2"
+        "create-react-app": "3.3.0",
+        "react-bootstrap": "1.0.0-beta.16",
+        "react-router-dom": "5.1.2"
     }
 }

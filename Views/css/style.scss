@@ -1,0 +1,64 @@
+/*
+*
+* ==========================================
+* Common settings
+* ==========================================
+*
+*/
+body{
+    background: none;
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .container{
+        padding-top: 56px;
+        // padding-bottom: 106px;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        background: grey;
+        .material-icons{
+            color: #fff;
+            font-size: 3rem;
+            margin: .8rem;
+        }
+    }
+}
+/*
+*
+* ==========================================
+* Login page
+* ==========================================
+*
+*/
+body {
+    min-height: 100vh;
+}
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+.border-md {
+    border-width: 2px;
+}

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Dec 14, 2019 at 11:31 AM
--- Server version: 5.7.24
--- PHP Version: 7.2.14
+-- Host: localhost:3306
+-- Generation Time: Jan 02, 2020 at 09:11 PM
+-- Server version: 5.6.41-84.1
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,9 +28,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `businesses`
 --
 
-DROP TABLE IF EXISTS `businesses`;
-CREATE TABLE IF NOT EXISTS `businesses` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `businesses` (
+  `id` mediumint(50) NOT NULL,
   `strName` varchar(255) NOT NULL,
   `strEmail` varchar(255) NOT NULL,
   `strPassword` varchar(255) NOT NULL,
@@ -38,9 +37,8 @@ CREATE TABLE IF NOT EXISTS `businesses` (
   `strAddress` varchar(255) NOT NULL,
   `strCity` varchar(255) NOT NULL,
   `strProvince` varchar(255) NOT NULL,
-  `strZip` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `strZip` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `businesses`
@@ -58,12 +56,10 @@ INSERT INTO `businesses` (`id`, `strName`, `strEmail`, `strPassword`, `strWasteT
 -- Table structure for table `food_allergens`
 --
 
-DROP TABLE IF EXISTS `food_allergens`;
-CREATE TABLE IF NOT EXISTS `food_allergens` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `food_allergens` (
+  `id` mediumint(50) NOT NULL,
   `strName` varchar(255) NOT NULL,
-  `strDescription` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `strDescription` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -72,12 +68,10 @@ CREATE TABLE IF NOT EXISTS `food_allergens` (
 -- Table structure for table `food_details`
 --
 
-DROP TABLE IF EXISTS `food_details`;
-CREATE TABLE IF NOT EXISTS `food_details` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `food_details` (
+  `id` mediumint(50) NOT NULL,
   `nFoodTypeID` mediumint(50) NOT NULL,
-  `nFoodAllergenID` mediumint(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  `nFoodAllergenID` mediumint(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -86,12 +80,10 @@ CREATE TABLE IF NOT EXISTS `food_details` (
 -- Table structure for table `food_type`
 --
 
-DROP TABLE IF EXISTS `food_type`;
-CREATE TABLE IF NOT EXISTS `food_type` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `food_type` (
+  `id` mediumint(50) NOT NULL,
   `strName` varchar(255) NOT NULL,
-  `strDescription` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `strDescription` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -100,9 +92,8 @@ CREATE TABLE IF NOT EXISTS `food_type` (
 -- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `orders`;
-CREATE TABLE IF NOT EXISTS `orders` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `orders` (
+  `id` mediumint(50) NOT NULL,
   `nBusinessID` mediumint(50) NOT NULL,
   `strBusinessName` varchar(255) NOT NULL,
   `strBusinessEmail` varchar(255) NOT NULL,
@@ -114,9 +105,8 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `strDeliveryWindow` varchar(255) NOT NULL,
   `timePickup` time NOT NULL,
   `nOrderedFoodID` mediumint(50) NOT NULL,
-  `bActiveOrder` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `bActiveOrder` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `orders`
@@ -134,13 +124,11 @@ INSERT INTO `orders` (`id`, `nBusinessID`, `strBusinessName`, `strBusinessEmail`
 -- Table structure for table `orders_food`
 --
 
-DROP TABLE IF EXISTS `orders_food`;
-CREATE TABLE IF NOT EXISTS `orders_food` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `orders_food` (
+  `id` mediumint(50) NOT NULL,
   `nFoodAllergenID` mediumint(50) NOT NULL,
   `strDescription` longtext NOT NULL,
-  `strImage` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `strImage` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -149,26 +137,117 @@ CREATE TABLE IF NOT EXISTS `orders_food` (
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` mediumint(50) NOT NULL,
   `strFirstName` varchar(255) NOT NULL,
   `strLastName` varchar(255) NOT NULL,
   `strEmail` varchar(255) NOT NULL,
   `strPassword` varchar(255) NOT NULL,
   `strCity` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `strAuthToken` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `strFirstName`, `strLastName`, `strEmail`, `strPassword`, `strCity`) VALUES
-(1, 'Dean', 'Winchester', 'dw@supernatural.com', 'dw', 'Surrey'),
-(2, 'Sam', 'Winchester', 'sw@supernatural.com', 'sw', 'Langley'),
-(3, 'Rick', 'Grimes', 'rg@alexandria.com', 'rg', 'Vancouver'),
-(4, 'Carol', 'Peletier', 'cp@kingdom.com', 'cp', 'Kitsilano');
+INSERT INTO `users` (`id`, `strFirstName`, `strLastName`, `strEmail`, `strPassword`, `strCity`, `strAuthToken`) VALUES
+(1, 'Dean', 'Winchester', 'dw@supernatural.com', 'dw', 'Surrey', NULL),
+(2, 'Sam', 'Winchester', 'sw@supernatural.com', 'sw', 'Langley', NULL),
+(3, 'Rick', 'Grimes', 'rg@alexandria.com', 'rg', 'Vancouver', NULL),
+(4, 'Carol', 'Peletier', 'cp@kingdom.com', 'cp', 'Kitsilano', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `businesses`
+--
+ALTER TABLE `businesses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `food_allergens`
+--
+ALTER TABLE `food_allergens`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `food_details`
+--
+ALTER TABLE `food_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `food_type`
+--
+ALTER TABLE `food_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders_food`
+--
+ALTER TABLE `orders_food`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `businesses`
+--
+ALTER TABLE `businesses`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `food_allergens`
+--
+ALTER TABLE `food_allergens`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `food_details`
+--
+ALTER TABLE `food_details`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `food_type`
+--
+ALTER TABLE `food_type`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `orders_food`
+--
+ALTER TABLE `orders_food`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
